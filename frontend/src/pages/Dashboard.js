@@ -1,9 +1,8 @@
-import React from 'react'
+import React from "react";
+import MiniDrawer from "../components/drawer/drawer";
 
 function Dashboard() {
-  return (
-    <div>Dashboard</div>
-  )
+  return <div>Dashboard</div>;
 }
 
-export default Dashboard
+export default Dashboard;
