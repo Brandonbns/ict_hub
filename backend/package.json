@@ -4,12 +4,15 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js"
   },
   "author": "Brandon Baines",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^5.1.1",
     "express": "^4.18.2",
+    "mongodb": "4.1",
     "mongoose": "^8.0.1"
   }
 }
