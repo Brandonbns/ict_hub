@@ -1,0 +1,64 @@
+.userCreationForm {
+  height: fit-content !important;
+  width: 25vw !important;
+  background-color: #ffffff80 !important;
+}
+
+.ui.input {
+  padding: 5px !important;
+}
+
+.ui.form {
+  background-color: #ffffff00 !important;
+}
+
+.signupForm {
+  padding: 0;
+}
+
+.signupContainer {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../../images/website-bg-login.jpg) !important;
+  background-repeat: no-repeat;
+  background-size: 100vw 105vh;
+  margin-top: 2%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 1200px) {
+  .userCreationForm {
+    height: fit-content !important;
+    width: 35vw !important;
+    background-color: #ffffff80 !important;
+    position: fixed;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .userCreationForm {
+    height: fit-content !important;
+    width: fit-content !important;
+    background-color: #ffffff80 !important;
+    position: fixed;
+  }
+
+  .signupForm {
+    padding: 0;
+  }
+
+  .signupContainer {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../../images/website-bg-signup-mobile.jpg) !important;
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
