@@ -1,3 +1,0 @@
-DB_URI = mongodb+srv://admin:Q2tDwAcXN5YjW_Y@icthubwithbrandon.ddiadj0.mongodb.net/?retryWrites=true&w=majority&appName=icthubwithbrandon
-moodleURI = https://icthubwithbrandon.gnomio.com/webservice/rest/server.php
-PORT = 5000
