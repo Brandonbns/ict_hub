@@ -1,20 +1,18 @@
 const axios = require("axios");
 const bcrypt = require("bcrypt");
+const dotenv = require("dotenv");
 const User = require("../models/userModel");
 const FormData = require("form-data");
 
 module.exports = {
   signup: async (req, res) => {
-    console.log(req.body, "req");
     try {
       const { userName, password, email } = req.body;
       const user = await User.find({ userName: userName });
       const isEmail = await User.find({ email: email });
       if (user.length) {
-        console.log("username error");
         res.status(400).json({ message: "Username already exists" });
       } else if (isEmail.length) {
-        console.log("email error");
         res.status(400).json({ message: "Email already exists" });
       } else {
         let data = req.body;
@@ -54,7 +52,6 @@ module.exports = {
 
   login: async (req, res) => {
     try {
-      console.log(req.body);
       const { userName, password } = req.body;
       const user = await User.find({ userName: userName });
       if (user.length === 0) {
@@ -105,13 +102,8 @@ const createMoodleUser = async (data) => {
   await formData.append("users[0][email]", data.email);
 
   return axios
-    .post(
-      "https://icthubwithbrandon.gnomio.com/webservice/rest/server.php",
-      formData,
-      { headers: formData.getHeaders() }
-    )
+    .post(process.env.moodleURI, formData, { headers: formData.getHeaders() })
     .then((result) => {
-      console.log(result.data, "result");
       return result.data;
     })
     .catch((err) => {

@@ -6,8 +6,8 @@ const connectDB = (app) => {
   mongoose
     .connect(process.env.DB_URI, { dbName: "icthub" })
     .then(() => {
-      app.listen(8000, () => {
-        console.log("Servers started and listening at port 8000");
+      app.listen(process.env.PORT, () => {
+        console.log("Servers started and listening at port", process.env.PORT);
       });
       console.log("db connected");
     })

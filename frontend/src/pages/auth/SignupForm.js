@@ -122,7 +122,7 @@ function SignupForm() {
     if (!requiredCheck(e)) {
       axios({
         method: "post",
-        url: "http://localhost:8000/user/signup",
+        url: process.env.API_URI,
         data: {
           fName: fName.value,
           lName: lName.value,
